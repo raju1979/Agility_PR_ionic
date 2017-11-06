@@ -1,0 +1,104 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Contact Information</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="userProfileCard">
+    <div class="userSnap">
+      <img src="../../assets/imgs/{{contactInfo.snap}}" alt="">
+    </div>
+    <div class="userInfo">
+      <h3>{{contactInfo.firstName}} {{contactInfo.lastName}}</h3>
+      <p>{{contactInfo.tagline}}</p>
+      <h4>{{contactInfo.outlet}}
+        <span [innerHTML]="getStatus(contactInfo.status)"></span>
+      </h4>
+    </div>
+  </div>
+
+  <div class="userProfileDetails">
+
+
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-address-card"></i>
+        <h4>Contact</h4>
+      </div>
+      <div class="sectionContent">
+        <p>{{contactInfo.contact.addressLine1}}</p>
+        <p>{{contactInfo.contact.addressLine2}}</p>
+        <p>{{contactInfo.contact.addressLine3}}</p>
+        <h5>{{contactInfo.contact.email}}</h5>
+        <h5>{{contactInfo.contact.phoneNumber1}}
+          <span>Primary</span>
+        </h5>
+        <h5>{{contactInfo.contact.phoneNumber2}}</h5>
+        <h5>{{contactInfo.contact.faxNumber}}
+          <span>Fax</span>
+        </h5>
+      </div>
+    </div>
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-briefcase"></i>
+        <h4>Website</h4>
+      </div>
+      <div class="sectionContent">
+        <h5>{{contactInfo.website}}</h5>
+      </div>
+    </div>
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-edit"></i>
+        <h4>Subjects</h4>
+      </div>
+      <div class="sectionContent">
+        <p>
+          <span *ngFor="let subject of contactInfo.subjects">{{subject}}</span>
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-briefcase"></i>
+        <h4>Job Role</h4>
+      </div>
+      <div class="sectionContent">
+        <p>{{contactInfo.jobRole}}</p>
+      </div>
+    </div>
+
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-globe"></i>
+        <h4>Languages</h4>
+      </div>
+      <div class="sectionContent">
+        <p>
+          <span *ngFor="let language of contactInfo.languages">{{language}}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="userProfileSection">
+      <div class="sectionHeader">
+        <i class="fa fa-map-pin"></i>
+        <h4>Coverage</h4>
+      </div>
+      <div class="sectionContent">
+        <p>{{contactInfo.coverage}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

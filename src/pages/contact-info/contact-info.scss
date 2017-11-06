@@ -1,0 +1,91 @@
+page-contact-info {
+    .userProfileCard {
+        width: 100%;
+        display: flex;
+        background: linear-gradient( to bottom, #e5e5e5 0%, #e5e5e5 60%, #fff 60%, #fff 100%);
+        padding: 1em;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1em;
+    }
+    .userSnap {
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .userSnap img {
+        width: 100px;
+        height: 100px;
+        border: solid 3px #fff;
+    }
+    .userInfo h3 {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .userInfo p {
+        margin: 0;
+        padding: 0;
+    }
+    .userInfo h4 {
+        color: #015595;
+        font-size: 4.5vw;
+    }
+
+
+
+    .userProfileDetails
+    {
+        width: 100%;
+        padding: 2em; 
+    }
+    .userProfileSection{
+        width: 100%;
+    }
+    .sectionHeader 
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionHeader i
+    {
+        color: #7e7e7e;
+        width: 30px;
+    }
+    .sectionHeader h4
+    {
+        margin: 0;
+        flex: 1;
+        color: #ce401c;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .sectionContent
+    {
+        width: 100%;
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+    .sectionContent p,
+    .sectionContent h5{
+        font-size: 1.2em;
+        margin: 0;
+        padding: 3px 0;
+    }
+    .sectionContent h5
+    {
+        color: #015595;
+    }
+    .sectionContent h5 span
+    {
+        color: #777777;
+        font-size: 0.8em;
+    }
+    .sectionContent p span
+    {
+        padding-right: 4px;
+    }
+}

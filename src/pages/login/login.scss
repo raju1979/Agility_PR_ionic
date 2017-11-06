@@ -1,0 +1,111 @@
+page-login {
+    .scroll-content
+    {
+        background-image: url('../../assets/imgs/loginbg.jpg');
+        background-size: cover;
+    }
+    .loginPageHeader
+    {
+        background-color: rgba(34, 109, 165, 0.8);
+        padding: 2em 1em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin-top: 5em;
+    }
+    .loginPageHeader h1{
+        font-size: 10vw;
+        margin:0;
+        padding: 0;
+        padding-right: 8px;
+    }
+    .loginPageHeader p{
+        font-size: 5vw;
+        margin:0;
+        padding: 0;
+        line-height: 1em;
+        padding-left: 8px;
+        border-left: solid 2px #fff;
+    }
+    .loginPageForm
+    {
+        width: 100%;
+        margin-top: 5em;
+        background-color: rgba(0,0,0,0.7);
+        padding: 2em 3em;
+    }
+    .newFormControl
+    {
+        width: 100%;
+        border: solid 2px #fff;
+        color: #fff;
+        padding: 1em;
+        margin-bottom: 1.5em;
+        font-size: 1.2em;
+    }
+    .newFormControl input
+    {
+        background: none;
+        outline: none;
+        border: none;
+        padding-left: 10px;
+    }
+    .newFormBtn
+    {
+        width: 100%; 
+        margin-bottom: 1.5em;
+    }
+    .newFormBtn input
+    {
+        background-color: rgba(34, 109, 165, 1);
+        width: 100%; 
+        font-size: 1.2em;
+        height: 48px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+        border-radius: 0;
+        border:none;
+        outline:none;
+    }
+    .newFormBtn p{
+        text-align: center;
+        padding-top: 10px;
+        margin: 0;
+        font-size: 1.2em; 
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .loadingImgContainer{
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .loadingImgContainer img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .errorText{
+        color: color($colors,errorred);
+    }
+
+    #excessInvalidAttemptContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        z-index: 500;
+        background: #b2dfdb;
+    }
+
+    input[type=submit]:disabled,
+    button:disabled {
+        opacity: .5;
+    }
+
+}

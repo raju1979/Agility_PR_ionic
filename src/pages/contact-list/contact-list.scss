@@ -1,0 +1,40 @@
+page-contact-list {
+    .contactItem
+    {
+        width: 100%;
+        display: flex;
+        padding: 8px 0;
+    }
+    .contactSnap{
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactSnap img{
+        width: 60px;
+        height: 60px;
+        border: solid 3px #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .contactInfo
+    {
+        flex: 1;
+        padding-bottom: 5px;
+        border-bottom: solid 1px #cfcfcf;
+    }
+    .contactInfo h3
+    {
+        color: #005495;
+        font-weight: 600;
+        font-size: 1.3em;
+        margin: 0;
+        padding: 4px 0;
+    }
+    .contactInfo p {
+        font-size: 1.3em;
+        color: #454545;
+        margin: 0;
+        padding: 4px 0;
+    }
+}

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Contact List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="contactItem" *ngFor="let contact of contactList, let i = index" (click)="openContactInfo()">
+
+    <div class="contactSnap">
+      <img src="../../assets/imgs/{{contact.snap}}" alt="">
+    </div>
+    <div class="contactInfo">
+      <h3>
+        {{contact.lastName}}, {{contact.firstName}}
+      </h3>
+      <p>{{contact.outletName}} <span [innerHTML]="getStatus(contact.status)"></span></p>
+    </div>
+  </div>
+</ion-content>

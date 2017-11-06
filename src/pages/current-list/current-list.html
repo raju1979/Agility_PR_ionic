@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Current Lists</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="listItem" *ngFor="let list of currentList, let i = index" (click)="openContactList()">
+      <div class="listInfo">
+          <h3>
+              {{list.name}}
+          </h3>
+          <p>{{list.createdOn}} by {{list.createdBy}}</p>
+      </div>
+      <div class="listCount">
+          <span>{{list.totalUser}}</span>
+      </div>
+  </div>
+</ion-content>

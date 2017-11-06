@@ -1,0 +1,37 @@
+<ion-content>
+
+  <!-- <div id="excessInvalidAttemptContainer" *ngIf="excessInvalidAttempts">
+    <h3></h3>
+  </div> -->
+  
+  <div class="loginPage">
+      <div class="loginPageHeader">
+        <h1>Agility</h1> <p>PR <br/> Solutions</p>
+      </div>
+      <div class="loginPageForm">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.valid,f.value)">
+          <div class="newFormControl">
+            <ion-icon name="mail"></ion-icon>
+            <input type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel required/>
+          </div>
+          <div class="newFormControl">
+            <ion-icon name="key"></ion-icon>
+            <input type="password" placeholder="Password" name="Password" #Password="ngModel" ngModel required/>
+          </div>
+          <div class="newFormBtn">
+            <input type="submit" [disabled]="!f.valid" value="Sign In" />
+          </div>
+          <div class="loadingImgContainer" *ngIf="httpRequest">
+            <img [src]="getLoadingimg()" alt="" />
+          </div>
+          <div class="newFormBtn">
+            <p>Forgot Password?</p>
+          </div>
+        </form>
+      </div>
+  </div>
+  <div>
+
+  </div>
+
+</ion-content>

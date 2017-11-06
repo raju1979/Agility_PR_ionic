@@ -1,0 +1,44 @@
+page-current-list {
+    .listItem
+    {
+        width: 100%;
+        display: flex;
+        border-bottom: solid 1px #cfcfcf;
+        padding: 8px 0;
+    }
+    .listInfo
+    {
+        flex: 1;
+    }
+    .listInfo h3
+    {
+        color: #005495;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin: 0;
+        padding: 4px 0;
+    }
+    .listInfo p {
+        font-size: 1.3em;
+        color: #454545;
+        margin: 0;
+        padding: 4px 0;
+    }
+    .listCount{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .listCount span{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #cd4024; 
+        font-size: 1.1em;
+        color: #fff;
+    }
+}
