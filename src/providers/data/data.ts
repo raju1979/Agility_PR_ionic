@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, RequestOptions, Headers, Response, Request } from '@angular/http';
 
+import { Subject } from 'rxjs/Subject';
+
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,6 +12,8 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class DataProvider {
+
+  private userSubject = new Subject<any>();
 
   BASE_URL = "http://localhost:5000/api/";
 
@@ -42,6 +46,15 @@ export class DataProvider {
     .catch((error:any) => Observable.throw({status:error.status,message:error.json().Message})); 
 
 
+  };//
+
+  getSubjectObservable(): Observable<any> {
+    return this.userSubject.asObservable();
+  }
+
+  setUser(data) {
+    // this._localSt.store('userdata', JSON.stringify(data));
+    this.userSubject.next({ product: 'rajesh' });
   }
 
 }
