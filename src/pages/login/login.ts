@@ -22,7 +22,7 @@ export class LoginPage {
 
   warningAttempts : number = 2;
   maximumInvalidAttempts : number = 3;
-  lockInMinutes : number = 2;
+  lockInMinutes : number = 1;
 
   invalidLoginStartTime : any;
   invalidLoginEndTime : any;
@@ -34,6 +34,8 @@ export class LoginPage {
   constructor(public navCtrl : NavController, public navParams : NavParams, private _dataService : DataProvider, private _platform : Platform, private _alertCtrl : AlertController, private _storage : Storage,private _menuCtrl:MenuController) {}
 
   ionViewDidLoad() {
+
+    
     
     this._menuCtrl.enable(false);
     //check any existing login in the indexedDB
@@ -81,12 +83,10 @@ export class LoginPage {
           } else {
             //JSON.parse the value retreived from indexedDB
             let userStoredVal = JSON.parse(data);
-            // compare the userEmail entered in the form with the value retreived from
-            // indexedDB
+            // compare the userEmail entered in the form with the value retreived from indexedDB
             let userInvalidDataIndex = _.findIndex(userStoredVal, (o) => {
               return o.email == value.Email;
             });
-
             
 
             //if there is a match(!= -1) then hold user else procedd with login attempts
@@ -102,6 +102,7 @@ export class LoginPage {
                   ._storage
                   .remove('lockOutPayload')
                   .then((data) => {
+                    this.invalidAttemptArray = [];
                     console.log('you are good to go now')
                     this.proceedWithLogin(value);
                   })
@@ -135,6 +136,7 @@ export class LoginPage {
         this.onLogin(response.AuthenticateResponse);
       }, (error) => {
         this.noOfAttempt++;
+        console.log(error)
         console.log(this.noOfAttempt);
 
         let userInvalidData = _.findIndex(this.invalidAttemptArray, (o) => {

@@ -6,13 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>quick-search</ion-title>
+  <ion-navbar color="dark">
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div class="loadingImgContainer" *ngIf="httpRequest">
+    <img [src]="getLoadingimg()" alt="" />
+  </div>
 
 </ion-content>

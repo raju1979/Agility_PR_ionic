@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { MomentModule } from 'angular2-moment';
 
 import { IonicStorageModule } from '@ionic/storage';
+import { QuickSearchPage } from '../pages/quick-search/quick-search';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ContactInfoPage,
     OutletInfoPage,
     HomePage,
-    ListPage
+    ListPage,
+    QuickSearchPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ContactInfoPage,
     OutletInfoPage,
     HomePage,
-    ListPage
+    ListPage,
+    QuickSearchPage
   ],
   providers: [
     StatusBar,
