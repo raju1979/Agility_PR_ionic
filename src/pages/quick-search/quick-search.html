@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header no-border>
 
   <ion-navbar color="dark">
     <ion-title></ion-title>
@@ -13,10 +13,28 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <div class="loadingImgContainer" *ngIf="httpRequest">
-    <img [src]="getLoadingimg()" alt="" />
+  <div class="outerContainer">
+
+      <div class="searchContainer">
+        <ion-icon name="search" color="grey" class="searchIcon"></ion-icon>
+        <input type="text" placeholder="SEARCH CONTACTS & OUTLETS" #searchInput/>
+      </div>
+      <div class="viewAllBar">
+        <span>Contacts</span>
+        <span>View All</span>
+      </div>
+      <div class="contactsConainer">
+
+      </div>
+
+    <div class="loadingImgContainer" *ngIf="httpRequest">
+      <img [src]="getLoadingimg()" alt="" />
+    </div>
+
   </div>
+
+
 
 </ion-content>
