@@ -65,7 +65,7 @@ export class DataProvider {
     let query =  {
         "QuickSearchRequest": 
         {
-          "Name": "Lexiqvolax_",
+          "Name": "year",
           "GeographyIDs":
           [
             {
